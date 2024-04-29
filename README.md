@@ -1,28 +1,28 @@
-<h1>FilmyDuniya</h1>
+# FilmyDuniya
 
-# install nodemon package globally using the follow command in your terminal:
+<h4>install nodemon package globally using the follow command in your terminal:</h4>
     npm install nodemon -g
 
-# run the command to download the dependencies in frontend:
+<h4>run the command to download the dependencies in frontend:</h4>
     cd frontend
     npm i
 
-# run the command to download the dependencies in backend:
+<h4>run the command to download the dependencies in backend:</h4>
     cd backend
     npm i
 
-# command to run frontend:
+<h4>command to run frontend:</h4>
     cd frontend
     ng serve
 
-# command to run backend:
+<h4>command to run backend:</h4>
     cd backend 
     npm start
 
-# backend port:
+<h4>backend port:</h4>
     3002
 
-# frontend port:
+<h4>frontend port:</h4>
     4200
 
 
