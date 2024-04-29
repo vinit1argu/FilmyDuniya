@@ -1,0 +1,52 @@
+
+  <div class="movie-details">
+    <div class="movie-poster">
+      <img [src]="movie.poster_path ? getImageUrl(movie.poster_path) : 'assets/no-image.jpg'" alt="{{ movie.original_name}}" />
+    </div>
+
+    <div class="movie-info">
+
+      <div class="fl2">
+
+        <h2>{{ movie.original_name }} </h2>
+        
+
+        <h2 *ngIf="!isSame()">( {{movie.name}} )</h2>
+
+      </div>
+      <br>
+
+      <div class="fl">
+
+        <p class="release-date">{{ movie.last_air_date }}</p>
+
+        <div *ngIf="!movie.adult" class="age-rating">
+          <p>16+</p>
+        </div>
+        <div *ngIf="movie.adult" class="age-rating">
+          <p>18+</p>
+        </div>
+
+
+        <p class="language">
+          {{ movie.original_language }}
+        </p>
+      
+
+      </div>
+
+
+      <p class="overview">{{ movie.overview }}</p>
+      <p class="mrat"> Rating : {{ rounded(movie.vote_average)}}/10</p>
+
+
+
+      <div class="but">
+        <button class="button-74" (click)="addToMyTvList(movie.id)">Add to favourite</button>
+        <button class="button-74" (click)="removeFromMyTvList(movie.id)"  style="margin-left: 20px;">Remove from favourite</button>
+      </div>
+
+      <button class="button-74 watch-button" (click)="watchMovie()">Watch Now</button>
+
+    </div>
+  </div>

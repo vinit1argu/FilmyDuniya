@@ -1,0 +1,72 @@
+
+
+   .movie-details {
+    display: flex;
+    margin: 31px;
+    justify-content: center;
+  }
+  
+  .movie-poster img {
+    width: 450px;
+    border-radius: 8px;
+  }
+  
+  .movie-info {
+    margin-left: 70px;
+    max-width: 700px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .release-date {
+    color: #949292;
+    padding-right: 15px;
+  }
+  
+  .overview {
+    margin-bottom: 20px;
+  }
+  
+  .watch-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f60606;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  h4 {
+    font-weight: bold;
+  }
+
+  .fl{
+    display: inline-flex;
+    margin-bottom: 20px;
+  }
+
+  .age-rating{
+    color: #949292;
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+
+  .mrat{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .language{
+    color: #949292;
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+
+  
+  

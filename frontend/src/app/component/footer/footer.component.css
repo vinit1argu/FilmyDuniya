@@ -1,0 +1,14 @@
+.copyright {
+    padding: 15px 0px;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    
+  }
+  
+  .footer {
+    bottom: 0;
+    width: 100%;
+  box-shadow: 0 -2px 5px #fff3;
+  }

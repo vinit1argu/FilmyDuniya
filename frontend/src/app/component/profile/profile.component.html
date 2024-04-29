@@ -1,0 +1,32 @@
+<!-- <div class="card">
+  <div class="ds-top"></div>
+  <div class="avatar-holder">
+    <img src="../../../assets/icon.png" alt="">
+  </div>
+  <div class="name">
+    <p class="na"> {{user.Name}} </p>
+  </div>
+ 
+ 
+  
+</div> -->
+
+
+<div class="card">
+  <div class="ds-top"></div>
+  <div class="avatar-holder">
+    <img src="../../../assets/icon.png" alt="">
+  </div>
+  <div class="name">
+    <h3 class="nan"> {{ user.Name }} </h3>
+    <div class="bs">
+      <p class="na">Email : {{user.username}}</p>
+      <p class="na">Mobile : {{user.mobile}}</p>
+      <p class="na">Address : {{user.address}}</p>
+      <p class="na">Gender : {{user.gender}}</p>
+      
+      <br>
+
+      <button [routerLink]="['/edit', user._id]" class="button">Edit</button>
+    </div>
+  </div>

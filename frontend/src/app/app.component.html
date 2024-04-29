@@ -1,0 +1,10 @@
+<div class="dashboard">
+
+    <app-header *ngIf="shouldShowHeader()"></app-header>
+
+    <div class="content" [ngClass]="{'no-padding': shouldApplyPadding()}">
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
+<app-footer *ngIf="shouldShowFooter()"></app-footer>

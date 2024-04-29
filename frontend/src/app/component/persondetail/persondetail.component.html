@@ -1,0 +1,28 @@
+
+
+<div class="movie-details">
+    <div class="movie-poster">
+      <img [src]="tperson.profile_path? getImageUrl(tperson.profile_path) : 'assets/no-image.jpg'" alt="{{ tperson.name }}" />
+    </div>
+  
+    <div class="movie-info">
+      <h2>{{ tperson.name }}</h2>
+
+      <div class="fl">
+      
+      <p class="release-date department">{{ tperson.known_for_department }}</p>
+    
+
+</div>
+
+
+<p class="overview">{{ tperson.biography }}</p> 
+<p class="mrat"> Birthday : {{ tperson.birthday}}</p>
+<p class="mrat"> Birthday Place : {{ tperson.place_of_birth }}</p>
+
+<button *ngIf="islink()" class="watch-button" (click)="homepage()">Know Me More</button>
+</div>
+</div>
+
+
+

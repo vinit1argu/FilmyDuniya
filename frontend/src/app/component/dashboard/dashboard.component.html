@@ -1,0 +1,84 @@
+
+
+<main class="dashboard-content container my-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4 movie-slider">
+    <div class="card-slider col">
+      <div *ngFor="let g of genres">
+    <p-chip label={{g.name}} routerLink="/filter" (click)="filterByGenre(g.name)"></p-chip>
+  </div>
+</div>
+</div>
+</main>
+
+
+    <div *ngIf="searchInput.length==0">
+
+   
+     <main class="dashboard-content container my-4">
+      <section class="Popular movie">
+        <h2 class="pd"><b>Popular</b></h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 movie-slider">
+          <div class="card-slider col">
+            <div *ngFor="let movie of Pmovies" class="slide">
+              <div class="movie-card bg-dark text-white">
+                <a [routerLink]="['/detail', movie.id]">
+                <img [src]="movie.poster_path ? getImageUrl(movie.poster_path) : 'assets/no-image.jpg'" class="card-img-top" alt="{{ movie.original_title }}" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.original_title }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main class="dashboard-content container my-4">
+      <section class="Top movie">
+        <h2 class="pd"><b>Top Rated</b></h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 movie-slider">
+          <div class="card-slider col">
+            <div *ngFor="let movie of topMovies" class="slide">
+              <div class="movie-card bg-dark text-white">
+                <a [routerLink]="['/detail', movie.id]">
+                <img [src]="movie.poster_path ? getImageUrl(movie.poster_path) : 'assets/no-image.jpg'" class="card-img-top" alt="{{ movie.original_title }}" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.original_title }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <main class="dashboard-content container my-4">
+      <section class="Upcoming movie">
+        <h2 class="pd"><b>Upcoming</b></h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4 movie-slider">
+          <div class="card-slider col">
+            <div *ngFor="let movie of upcMovies" class="slide">
+              <div class="movie-card bg-dark text-white">
+                <a [routerLink]="['/detail', movie.id]">
+                <img [src]="movie.poster_path ? getImageUrl(movie.poster_path) : 'assets/no-image.jpg'" class="card-img-top" alt="{{ movie.original_title }}" />
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.original_title }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <div *ngIf="searchInput.length>0">
+
+    <app-search></app-search>
+  </div>
+
+  

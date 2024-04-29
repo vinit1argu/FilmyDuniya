@@ -1,0 +1,121 @@
+
+ 
+  .movie-slider {
+    overflow-x:scroll;
+    padding-bottom: 20px;
+     scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  
+  .movie-slider::-webkit-scrollbar {
+    display:none;
+  }
+  
+
+  .card-slider {
+    display: inline-flex;
+    gap: 25px;
+  }
+  
+
+  .slide {
+    flex:0 0 auto; 
+    width: 210px;
+  }
+  
+  .movie-card {
+    width: 210px;
+    /* height: 300px; */
+  background-color: #040303;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* overflow: hidden; */
+  }
+
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .movie-card:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-title{
+    font-family: 'Arial', sans-serif;
+    font-weight: bolder;
+  }
+
+  .movie-card .card-body h5 {
+    margin-top: 10px;
+    font-size: 17px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+  }
+
+  .pd{
+    margin-bottom: 20px;
+  }
+
+  .no-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px; 
+  }
+
+
+.button-74 {
+    background-color: #fff;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 15px;
+  }
+  
+  .button-74:hover {
+    background-color: #fff;
+  }
+  
+  .button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+  
+  .buttons-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buttons-container button {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  
+  

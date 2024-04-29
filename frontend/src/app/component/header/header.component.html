@@ -1,0 +1,82 @@
+<header class="dashboard-header st text-light p-3">
+  <div class="cb">
+    <a routerLink="/movie" class="nav-link"><h2 class="title">FilmyDuniya</h2></a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark nb">
+      <ul class="navbar-nav">
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/movie"><b>Movies</b></a>
+        </li>
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/tv"><b>TV Shows</b></a>
+
+        </li>
+
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/trending"><b>Trending</b></a>
+        </li>
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/list"><b>My List</b></a>
+        </li>
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/language"><b>Browse by Languages</b></a>
+        </li>
+        <li class="nav-item pd">
+          <a class="nav-link vv" routerLinkActive="active" routerLink="/profile"><b>Profile</b></a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <div class="cb nk">
+
+
+
+      <div class="dropdown genre-dropdown">
+        <button class="btn btn-secondary dropdown-toggle ge" type="button" id="genreDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleGenreDropdown()">
+          Genre
+        </button>
+        <div class="dropdown-menu" aria-labelledby="genreDropdown" [ngClass]="{ 'show': isGenreDropdownOpen }">
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Crime')">Crime</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Comedy')">Comedy</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Documentary')">Documentary</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Family')">Family</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Drama')">Drama</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Animation')">Animation</a>
+          <a class="dropdown-item" routerLink="/filter" (click)="filterByGenre('Mystery')">Mystery</a>
+
+
+        </div>
+      </div>
+
+
+      <div class="search-container">
+
+        <input *ngIf="isSearchVisible" #searchInputRef type="text" class="search-click" name="" placeholder="Search here..." [(ngModel)] = "searchInput" (keyup.enter)="onEnterKey()"/>
+        <div class="search-icon" (click)="toggleSearch()">
+          <i class="bi bi-search"></i>
+        </div>
+      </div>
+
+      <div class="dropdown profile-dropdown" >
+        <a class="nav-link vv dropdown-toggle lk" role="button" id="profileDropdown" data-bs-toggle="dropdown"
+          aria-expanded="false" (click)="toggleDropdown()">
+          <i class="bi bi-person cl"></i>
+        </a>
+        <ul class="dropdown-menu vk dropdown-menu-right" [ngClass]="{ 'show': isDropdownOpen }" aria-labelledby="profileDropdown">
+          <li><a class="dropdown-item"  routerLink="/profile" (click)="closeDropdown()">Profile</a></li>
+          <!-- <li>
+            <hr class="dropdown-divider">
+          </li> -->
+          <li><a class="dropdown-item" routerLink="/logout" (click)="logoutUser()">Logout</a></li>
+        </ul>
+      </div>
+      
+
+    </div>
+
+
+  </div>
+
+</header>
