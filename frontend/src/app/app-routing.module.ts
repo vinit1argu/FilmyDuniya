@@ -15,10 +15,12 @@ import { FilterComponent } from './component/filter/filter.component';
 import { LanguageComponent } from './component/language/language.component';
 import { ListComponent } from './component/list/list.component';
 import { EditprofileComponent } from './component/editprofile/editprofile.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/movie', pathMatch: 'full' },
   {path: 'movie', component: DashboardComponent , canActivate: [AuthGuard]},
+  {path: 'dashboard', component: DashboardComponent , canActivate: [AuthGuard]},
   {path: 'tv' , component: TvComponent},
   {path: 'trending', component: TrendingComponent},
   {path: 'detail/:id', component: DetailsComponent},
@@ -32,7 +34,7 @@ const routes: Routes = [
   {path:'language',component:LanguageComponent},
   {path : 'list',component:ListComponent},
   {path : 'edit/:id', component:EditprofileComponent},
-  
+  {path : '**', component:NotFoundComponent}
 ];
 
 @NgModule({

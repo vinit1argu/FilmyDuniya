@@ -24,6 +24,7 @@ import { LanguageComponent } from './component/language/language.component';
 import { ListComponent } from './component/list/list.component';
 import { EditprofileComponent } from './component/editprofile/editprofile.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { NotFoundComponent } from './component/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FooterComponent } from './component/footer/footer.component';
     LanguageComponent,
     ListComponent,
     EditprofileComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
